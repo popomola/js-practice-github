@@ -1,0 +1,18 @@
+#fileSelect{
+    font-size: 20px;
+}
+
+#fileSelectBtn{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+.pic{
+    width: 100px;
+    height: 100px;
+}
