@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="add">
+        <!--예쁘게 꾸미는 건 아직 모르겠으나 일단 이렇게 하면 여러 개의 파일을 가져올 수 있다.-->
+        <!-- <input type="file" id="fileSelect" multiple> -->
+        
+        <!--예쁘게도 방법이 있다. input에다가 display:none을 해주면 된다.
+            즉, input을 숨기고 새로운 디자인을 만들어서 그 디자인이 눌릴 때
+            이벤트가 발생하도록 하면 된다. 자바스크립트에서 addEventListner("click")
+            을 사용하는 것이다.-->
+        <!--<input type="file" id="fileSelect" multiple style="display: none;">
+            <span id="fileSelectBtn">Add</span>
+        -->
+        <input type="file" id="fileSelect" multiple>
+        <button id="btn">눌러주세요</button>
+    </div>
+    <script src="fileAdd.js"></script>
+</body>
+</html>
