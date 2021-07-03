@@ -1,6 +1,32 @@
-# html
+<html>
 form 기본에 대한 정보 링크 : https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form#active_learning_implementing_our_form_html
 
+#form
+여러 요소들에 의해 구성된다.
+예시->
+<form action="/my-handling-form-page" method="post">
+'여기서 action은 데이터를 어디로 보낼 것인지, method는 데이터를 어떻게 보낼 것인지를 정한다. 
+ <ul>
+  <li>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+'name attribute는 브라우저측에서는 데이터를 지정할 이름을 정해주고, 서버측에서는 이름으로 데이터를 처리하게 한다.
+'이 예시에서 name이 붙은 애들의 데이터는 form의 action이 정한 주소로, method에서 할당한 방식으로 전달 될 것이다.
+  </li>
+  <li>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email">
+  </li>
+  <li>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+  <li class="button">
+    <button type="submit">Send your message</button>
+'button의 type이 submit일 경우 form의 action에 해당하는 주소로 데이터를 보낸다.
+  </li>
+ </ul>
+</form>
 
 
 
