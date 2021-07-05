@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.bb{
+    width: 400px;
+    height: 100vh;
+    border: 2px solid black;
+}
+
+.t{
+    text-align: center;
+}
+
+.bb2{
+    width: 400px;
+    height: 50px;
+    border: 2px solid black;
+}
