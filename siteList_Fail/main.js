@@ -78,7 +78,7 @@ function showLinks(){
         a.innerText = urlList.linksName[i];
         li.appendChild(a);
         myList.appendChild(li);
-        urls.push(a.href);
+        urls.unshift(a.href);
         displayRecentList(a.href); // 값이 localstorage를 통해 저장은 되는 것 같다. 그런데 화면에 표시가 안됨        
     }
 }
