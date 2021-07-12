@@ -28,12 +28,76 @@ form 기본에 대한 정보 링크 : https://developer.mozilla.org/en-US/docs/L
  </ul>
 </form>
 
+#React
+Components - function으로도 만들 수 있고, class로도 만들 수 있다. Tech with Tim 유튜브를
+보면 Components는 return값이 JSX로 작성되어야 되는 것 같다.
+문법적으로 유의해야 할 점은, return값이 하나의 부모 아래에 묶여서 return되어야 한다는 것.
+예를 들어 ->
+function component1(){
 
+  return(
+    <div> --> 이런 식으로 하나의 부모 아래에서 return이 되어야 하는 데 만약
+      <p></p>
+      <h1></h1>
+    </div>
+  );
+}
+function component1(){
 
+  return(
+      <p></p> --> 이렇게 따로 두 가지가 return되는 게 안 된다는 것이다. 
+      <h1></h1>
+  );
+}
+  //--> 한편 return 안에는 html, JSX전부 사용 가능하다.
 
+//-->component를 사용하는 방법
+import logo from './logo.svg';
+import './App.css';
 
+function App() {
+  return (
+    <div className="App">
+      <info/> // 이런 식으로 호출을 한다. 여러 번 사용할 수 있다. component니까.
+    </div>
+  );
+}
+ 
+function info(){
+  return(
+    <div>
+      <h1>Hello</h1>
+      <p>Write your name</p>
+    </div>
+  );
+}
 
+export default App;
 
+//--> 한편 당연히 react에서도 변수를 만들 수 있다. 아래에 예제.
+function info(){
+  const title = "This is my title"; // 변수를 return 이전에 선언을 한다.
+  const isShowing = false; // 얘도 사용 가능하다.
+  
+  //-->기본적으로 결국 react도 js기반이다. js문법을 사용 가능하다.
+  //--> jsx는 html 속에서 js문법을 사용할 수 있게 해준다. 
+  //--> 다만 사용하려면 {}이 괄호 안에서 사용해야 하는 듯 하다.
+
+  return(
+    <div>
+      <h1>{isShowing ? title : ""}</h1>
+      <p>Write your name</p>
+    </div>
+  );
+}
+
+export default App;
+//--> 생각해보니까 어차피 react도 js를 기반으로 두는데 굳이 왜 쓰나, 
+//--> 설명만 들어서는 이해가 안 되었는데 조금 써보니까 알 것 같다.
+//--> js상에서 html에 영향을 주기 위해, 예를 들어 글자를 붙이거나 뭐 이미지를 붙이거나
+//--> 이런 것들을 할 때 굳이 귀찮게 html의 element들을 따로 호출할 필요도 없고,
+//--> 그냥 js상에서 html 혹은 유저 인터페이스에 대한, 혹은 유저 상호작용을 위한 작업을
+//--> 더 쉽게 할 수 있게 만들어준다.
 
 
 
