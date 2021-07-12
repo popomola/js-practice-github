@@ -72,7 +72,10 @@ function info(){
   );
 }
 
-export default App;
+export default App; // 이런 식으로 해줘야 다른 파일에서 여기서 만든 함수를 import해서 사용할 수 있다.
+                    // 만약 default를 지정 안 하면 다른 파일에서 이 파일의 함수를 import하려고 할 때,
+                    // 함수를 {}여기다가 감싸줘야 한다.
+
 
 //--> 한편 당연히 react에서도 변수를 만들 수 있다. 아래에 예제.
 function info(){
@@ -98,6 +101,19 @@ export default App;
 //--> 이런 것들을 할 때 굳이 귀찮게 html의 element들을 따로 호출할 필요도 없고,
 //--> 그냥 js상에서 html 혹은 유저 인터페이스에 대한, 혹은 유저 상호작용을 위한 작업을
 //--> 더 쉽게 할 수 있게 만들어준다.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
